@@ -1,0 +1,130 @@
+/* Fondo con imagen */
+body {
+    background: url('../img/fondo.png') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: brightness(50%);
+    z-index: -1;
+}
+
+/* ===== Navbar principal ===== */
+#mainNav .nav-link,
+#mainNav .navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+/* ===== Degradado con transparencia encima de imagen ===== */
+#mainNav {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+    color: white;
+}
+
+
+/* Hover efecto: color azul + zoom */
+#mainNav .nav-link:hover,
+#mainNav .navbar-brand:hover {
+    color: #007bff !important;
+    transform: scale(1.1);
+}
+
+/* ===== Dropdown (submenú) ===== */
+#mainNav .dropdown-menu .dropdown-item {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    color: #333 !important;
+    transition: all 0.3s ease;
+}
+
+/* Hover efecto en submenú */
+#mainNav .dropdown-menu .dropdown-item:hover {
+    color: #007bff !important;
+    transform: scale(1.05);
+    background-color: transparent;
+}
+
+/* Mostrar submenú al pasar el cursor */
+#mainNav .nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Animación al mostrar el submenú */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Asegura que el submenú se posicione correctamente */
+#mainNav .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo claro opcional */
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 2px 2px 5px #999;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .whatsapp-float img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .whatsapp-float:hover {
+    background-color: #1ebe57;
+  }
+
+.btn-llamanos {
+    display: inline-block;
+    padding: 12px 24px;
+    color: white;
+    background-color: rgba(0, 123, 255, 0.1); /* Azul con transparencia */
+    border: 2px solid #007bff; /* Azul fuerte */
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  .btn-llamanos:hover {
+    background-color: #007bff; /* Azul sólido al pasar el mouse */
+    color: white;
+  }
