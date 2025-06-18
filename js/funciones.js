@@ -5,6 +5,8 @@ $(document).ready(function () {
         $("#divNosotros").hide(1000);
         $("#divProteccionCivil").hide(1000);
         $("#divContacto").hide(1000);
+        $("#divServ1").hide(1000);
+        $("#divServ2").hide(1000);
     });
 
     $("#MenuNosotros").click(function (event) {
@@ -12,6 +14,8 @@ $(document).ready(function () {
         $("#divNosotros").show(1000);
         $("#divProteccionCivil").hide(1000);
         $("#divContacto").hide(1000);
+        $("#divServ1").hide(1000);
+        $("#divServ2").hide(1000);
     });
 
     $("#MenuProteccionCivil").click(function (event) {
@@ -19,6 +23,8 @@ $(document).ready(function () {
         $("#divNosotros").hide(1000);
         $("#divProteccionCivil").show(1000);
         $("#divContacto").hide(1000);
+        $("#divServ1").hide(1000);
+        $("#divServ2").hide(1000);
     });
 
     $("#MenuContacto").click(function (event) {
@@ -26,6 +32,8 @@ $(document).ready(function () {
         $("#divNosotros").hide(1000);
         $("#divProteccionCivil").hide(1000);
         $("#divContacto").show(1000);
+        $("#divServ1").hide(1000);
+        $("#divServ2").hide(1000);
     });
 
     $("#MenuServ1").click(function (event) {
